@@ -571,3 +571,141 @@ letter-spacing: 2px;
 }
 
 }
+/* =================================
+PHOTOGRAPHY GALLERY
+================================= */
+
+.photography-section {
+padding: 130px 7%;
+background: #f7f4ef;
+}
+
+
+.gallery-heading {
+text-align: center;
+max-width: 650px;
+margin: 0 auto 70px;
+}
+
+
+.gallery-heading > p:first-child {
+font-family: Arial, sans-serif;
+font-size: 10px;
+letter-spacing: 4px;
+margin-bottom: 18px;
+}
+
+
+.gallery-heading h2 {
+font-family: Georgia, "Times New Roman", serif;
+font-size: clamp(50px, 7vw, 90px);
+font-weight: normal;
+margin-bottom: 25px;
+}
+
+
+.gallery-intro {
+font-family: Arial, sans-serif;
+color: #777;
+line-height: 1.7;
+font-size: 14px;
+}
+
+
+/* PHOTO GRID */
+
+.photo-grid {
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+grid-auto-rows: 320px;
+
+gap: 20px;
+}
+
+
+/* PHOTO ITEMS */
+
+.photo-item {
+overflow: hidden;
+background: #ddd;
+}
+
+
+.photo-item img {
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+display: block;
+
+transition:
+transform 0.7s ease,
+filter 0.7s ease;
+}
+
+
+.photo-item:hover img {
+transform: scale(1.05);
+
+filter: brightness(0.9);
+}
+
+
+/* DIFFERENT SIZES */
+
+.photo-large {
+grid-row: span 2;
+}
+
+
+.photo-small {
+grid-row: span 1;
+}
+
+
+.photo-wide {
+grid-column: span 2;
+grid-row: span 1;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+.photography-section {
+padding: 90px 5%;
+}
+
+
+.gallery-heading {
+margin-bottom: 45px;
+}
+
+
+.photo-grid {
+grid-template-columns: 1fr;
+
+grid-auto-rows: 400px;
+
+gap: 15px;
+}
+
+
+.photo-large,
+.photo-small,
+.photo-wide {
+grid-column: span 1;
+
+grid-row: span 1;
+}
+
+
+.photo-item {
+height: 400px;
+}
+
+}
