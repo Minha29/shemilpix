@@ -1,449 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ShemilPix | Photography & Visual Media</title>
 
-<meta
-name="description"
-content="ShemilPix — Photography, Videography and Visual Media"
->
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-<link rel="stylesheet" href="style.css">
+html {
+scroll-behavior: smooth;
+}
 
+body {
+font-family: Arial, sans-serif;
+background: #0b0b0b;
+color: white;
+}
+
+/* NAVIGATION */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 22px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(0, 0, 0, 0.75);
+backdrop-filter: blur(10px);
+z-index: 1000;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+nav ul {
+list-style: none;
+display: flex;
+gap: 30px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 15px;
+}
+
+nav ul li a:hover {
+opacity: 0.6;
+}
+
+/* HERO */
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 100px 20px 40px;
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.8)),
+url("IMG_0388%20(1).jpeg") center/cover no-repeat;
+}
+
+.hero-content h1 {
+font-size: clamp(55px, 12vw, 130px);
+letter-spacing: 8px;
+text-transform: uppercase;
+}
+
+.hero-content p {
+margin-top: 15px;
+font-size: 18px;
+letter-spacing: 4px;
+color: #cccccc;
+}
+
+.button {
+display: inline-block;
+margin-top: 35px;
+padding: 14px 28px;
+border: 1px solid white;
+color: white;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.button:hover {
+background: white;
+color: black;
+}
+
+/* GENERAL SECTION */
+section {
+padding: 100px 7%;
+}
+
+.section-title {
+font-size: 42px;
+margin-bottom: 45px;
+}
+
+/* PHOTOGRAPHY */
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 18px;
+}
+
+.gallery img {
+width: 100%;
+height: 380px;
+object-fit: cover;
+display: block;
+transition: transform 0.4s;
+}
+
+.gallery img:hover {
+transform: scale(1.03);
+}
+
+/* VIDEOGRAPHY */
+.video-box {
+width: 100%;
+min-height: 350px;
+border: 1px solid #333;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 30px;
+}
+
+.video-box p {
+color: #aaa;
+}
+
+/* ABOUT */
+.about {
+max-width: 750px;
+}
+
+.about p {
+color: #bdbdbd;
+line-height: 1.9;
+font-size: 17px;
+}
+
+/* CONTACT */
+.contact {
+text-align: center;
+}
+
+.contact p {
+color: #aaa;
+margin: 12px 0;
+}
+
+.instagram {
+display: inline-block;
+margin-top: 25px;
+color: white;
+text-decoration: none;
+border-bottom: 1px solid white;
+padding-bottom: 5px;
+}
+
+/* FOOTER */
+footer {
+padding: 30px;
+text-align: center;
+border-top: 1px solid #222;
+color: #777;
+font-size: 13px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+nav {
+padding: 18px 5%;
+}
+
+nav ul {
+gap: 12px;
+}
+
+nav ul li a {
+font-size: 12px;
+}
+
+.hero-content h1 {
+letter-spacing: 4px;
+}
+
+section {
+padding: 75px 5%;
+}
+
+.section-title {
+font-size: 32px;
+}
+}
+</style>
 </head>
-
 
 <body>
 
-
 <!-- NAVIGATION -->
-
-<header class="navbar">
-
-<a href="#home" class="logo">
-SHEMILPIX
-</a>
-
-
 <nav>
+<div class="logo">SHEMILPIX</div>
 
-<a href="#photography">
-Photography
-</a>
-
-<a href="#videography">
-Videography
-</a>
-
-<a href="#about">
-About
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-<a
-href="https://instagram.com/yourusername"
-target="_blank"
->
-Instagram ↗
-</a>
-
+<ul>
+<li><a href="#photography">Photography</a></li>
+<li><a href="#videography">Videography</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
-
-</header>
-
 
 
 <!-- HERO -->
-
-<section class="hero" id="home">
+<section class="hero">
 
 <div class="hero-content">
 
-<p class="eyebrow">
-PHOTOGRAPHY • VISUAL MEDIA
-</p>
+<h1>SHEMILPIX</h1>
 
+<p>PHOTOGRAPHY • VIDEOGRAPHY • VISUAL MEDIA</p>
 
-<h1>
-Stories<br>
-<em>through</em><br>
-my lens.
-</h1>
-
-
-<p class="hero-description">
-
-Capturing moments, emotions
-and stories that deserve to
-be remembered.
-
-</p>
-
-
-<a
-href="#photography"
-class="hero-button"
->
-EXPLORE MY WORK ↓
+<a href="#photography" class="button">
+Explore My Work
 </a>
 
 </div>
 
 </section>
-
 
 
 <!-- PHOTOGRAPHY -->
+<section id="photography">
 
-<section
-class="photography"
-id="photography"
->
-
-<div class="section-heading">
-
-<p>
-01 — PHOTOGRAPHY
-</p>
-
-<h2>
-Moments<br>
-<em>captured.</em>
+<h2 class="section-title">
+Photography
 </h2>
 
-</div>
+<div class="gallery">
 
+<img src="IMG_0388%20(1).jpeg" alt="ShemilPix Photography">
 
-<div class="photo-grid">
+<img src="image/IMG_0387%20(9).jpeg" alt="ShemilPix Photography">
 
+<img src="image/IMG_0389.jpeg" alt="ShemilPix Photography">
 
-<div class="photo-card">
+<img src="image/IMG_0391.jpeg" alt="ShemilPix Photography">
 
-<img
-src="images/photo1.jpg"
-alt="ShemilPix Photography"
->
-
-<div class="photo-info">
-
-<span>01</span>
-
-<h3>
-Portraits
-</h3>
-
-</div>
-
-</div>
-
-
-
-<div class="photo-card">
-
-<img
-src="images/photo2.jpg"
-alt="ShemilPix Photography"
->
-
-<div class="photo-info">
-
-<span>02</span>
-
-<h3>
-Events
-</h3>
-
-</div>
-
-</div>
-
-
-
-<div class="photo-card">
-
-<img
-src="images/photo3.jpg"
-alt="ShemilPix Photography"
->
-
-<div class="photo-info">
-
-<span>03</span>
-
-<h3>
-Lifestyle
-</h3>
-
-</div>
-
-</div>
-
-
-
-<div class="photo-card">
-
-<img
-src="images/photo4.jpg"
-alt="ShemilPix Photography"
->
-
-<div class="photo-info">
-
-<span>04</span>
-
-<h3>
-Special Moments
-</h3>
-
-</div>
-
-</div>
-
+<img src="image/IMG_0392%20(1).jpeg" alt="ShemilPix Photography">
 
 </div>
 
 </section>
-
 
 
 <!-- VIDEOGRAPHY -->
+<section id="videography">
 
-<section
-class="videography"
-id="videography"
->
-
-<div class="section-heading">
-
-<p>
-02 — VIDEOGRAPHY
-</p>
-
-<h2>
-Stories<br>
-<em>in motion.</em>
+<h2 class="section-title">
+Videography
 </h2>
 
-</div>
+<div class="video-box">
 
-
-<div class="video-content">
-
-
-<div class="video-placeholder">
-
-<div class="play-button">
-▶
-</div>
+<div>
+<h3>Visual Stories</h3>
 
 <p>
-YOUR VIDEO / REEL
+Cinematic videos, events and creative visual storytelling.
 </p>
-
-</div>
-
-
-<div class="video-text">
-
-<p>
-
-From short cinematic reels
-to meaningful moments,
-I create visual stories
-that bring memories to life.
-
-</p>
-
-
-<a
-href="https://instagram.com/yourusername"
-target="_blank"
-class="text-link"
->
-WATCH MORE ON INSTAGRAM →
-</a>
-
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- ABOUT -->
+<section id="about">
 
-<section
-class="about"
-id="about"
->
-
-<div class="about-image">
-
-<img
-src="images/about.jpg"
-alt="About ShemilPix"
->
-
-</div>
-
-
-<div class="about-content">
-
-<p>
-03 — ABOUT SHEMILPIX
-</p>
-
-
-<h2>
-Behind<br>
-the <em>lens.</em>
+<h2 class="section-title">
+About ShemilPix
 </h2>
 
+<div class="about">
 
-<p class="about-text">
-
-ShemilPix is a photography
-and visual media space created
-to capture genuine moments,
-emotions and stories.
-
-</p>
-
-
-<p class="about-text">
-
-Every photograph has a story.
-Every frame has a feeling.
-And every moment deserves
-to be remembered.
-
+<p>
+ShemilPix is a photography and visual media space
+dedicated to capturing beautiful moments, stories
+and emotions through photographs and videos.
 </p>
 
 </div>
 
 </section>
-
 
 
 <!-- CONTACT -->
+<section id="contact" class="contact">
 
-<section
-class="contact"
-id="contact"
->
-
-<p>
-04 — CONTACT
-</p>
-
-
-<h2>
-Let's create<br>
-something <em>beautiful.</em>
+<h2 class="section-title">
+Contact
 </h2>
 
-
-<p class="contact-text">
-
-Have a project, event or story
-you'd like to capture?
-
-Let's talk.
-
+<p>
+Interested in working together?
 </p>
 
-
-<div class="contact-buttons">
-
-
-<a
-href="mailto:your@email.com"
-class="contact-button"
->
-EMAIL ME ↗
-</a>
-
+<p>
+Get in touch with ShemilPix.
+</p>
 
 <a
-href="https://instagram.com/yourusername"
+class="instagram"
+href="https://www.instagram.com/"
 target="_blank"
-class="contact-button"
 >
-INSTAGRAM ↗
+Instagram →
 </a>
-
-
-</div>
 
 </section>
 
 
-
 <!-- FOOTER -->
-
 <footer>
 
-<div class="footer-logo">
-SHEMILPIX
-</div>
-
-
-<p>
-Photography • Videography • Visual Media
-</p>
-
-
-<div class="footer-links">
-
-<a href="#photography">
-Photography
-</a>
-
-<a href="#videography">
-Videography
-</a>
-
-<a href="#about">
-About
-</a>
-
-<a href="#contact">
-Contact
-</a>
-
-<a
-href="https://instagram.com/yourusername"
-target="_blank"
->
-Instagram
-</a>
-
-</div>
-
-
-<small>
-© 2026 ShemilPix. All rights reserved.
-</small>
+© 2026 ShemilPix — Photography & Visual Media
 
 </footer>
 
-
-
-<script src="script.js"></script>
-
-
 </body>
-
 </html>
-
-
