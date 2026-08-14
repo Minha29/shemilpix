@@ -333,3 +333,241 @@ gap: 10px;
 text-align: center;
 }
 }
+/* =================================
+SHEMILPIX HERO SECTION
+================================= */
+
+.hero {
+min-height: 100vh;
+
+position: relative;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+padding: 120px 7%;
+
+background-image: url("IMG_0388%20(1).jpeg");
+
+background-size: cover;
+background-position: center;
+
+color: white;
+
+overflow: hidden;
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+position: absolute;
+
+inset: 0;
+
+background: rgba(0, 0, 0, 0.48);
+
+z-index: 1;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+position: relative;
+
+z-index: 2;
+
+max-width: 1000px;
+}
+
+
+/* SMALL TEXT */
+
+.hero-small-text {
+font-family: Arial, sans-serif;
+
+font-size: 11px;
+
+letter-spacing: 4px;
+
+margin-bottom: 30px;
+
+opacity: 0.9;
+}
+
+
+/* MAIN TITLE */
+
+.hero h1 {
+font-family: Georgia, "Times New Roman", serif;
+
+font-size: clamp(70px, 12vw, 170px);
+
+font-weight: normal;
+
+letter-spacing: 8px;
+
+line-height: 0.9;
+
+margin: 0;
+
+animation: heroTitle 1.2s ease;
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+font-family: Arial, sans-serif;
+
+font-size: 16px;
+
+line-height: 1.7;
+
+margin-top: 30px;
+
+color: #eeeeee;
+}
+
+
+/* BUTTON */
+
+.hero-button {
+display: inline-block;
+
+margin-top: 35px;
+
+padding: 15px 28px;
+
+border: 1px solid white;
+
+color: white;
+
+text-decoration: none;
+
+font-family: Arial, sans-serif;
+
+font-size: 11px;
+
+letter-spacing: 2px;
+
+transition: all 0.3s ease;
+}
+
+
+.hero-button:hover {
+background: white;
+
+color: black;
+}
+
+
+/* SCROLL TEXT */
+
+.scroll-text {
+position: absolute;
+
+bottom: 30px;
+
+left: 50%;
+
+transform: translateX(-50%);
+
+z-index: 2;
+
+font-family: Arial, sans-serif;
+
+font-size: 10px;
+
+letter-spacing: 3px;
+
+opacity: 0.75;
+
+animation: scrollMove 2s infinite;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes heroTitle {
+
+from {
+opacity: 0;
+
+transform: translateY(30px);
+}
+
+to {
+opacity: 1;
+
+transform: translateY(0);
+}
+
+}
+
+
+@keyframes scrollMove {
+
+0% {
+transform: translate(-50%, 0);
+}
+
+50% {
+transform: translate(-50%, 8px);
+}
+
+100% {
+transform: translate(-50%, 0);
+}
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+.hero {
+min-height: 100svh;
+
+padding: 100px 6%;
+}
+
+
+.hero-small-text {
+font-size: 9px;
+
+letter-spacing: 2px;
+
+line-height: 1.8;
+}
+
+
+.hero h1 {
+font-size: 62px;
+
+letter-spacing: 4px;
+}
+
+
+.hero-description {
+font-size: 14px;
+}
+
+
+.hero-button {
+padding: 14px 22px;
+}
+
+
+.scroll-text {
+font-size: 8px;
+
+letter-spacing: 2px;
+}
+
+}
