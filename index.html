@@ -40,22 +40,22 @@ z-index: 1000;
 .logo {
 font-size: 24px;
 font-weight: bold;
-letter-spacing: 2px;
+letter-spacing: 3px;
 }
 
 nav ul {
 list-style: none;
 display: flex;
-gap: 30px;
+gap: 28px;
 }
 
-nav ul li a {
+nav a {
 color: white;
 text-decoration: none;
-font-size: 15px;
+font-size: 14px;
 }
 
-nav ul li a:hover {
+nav a:hover {
 opacity: 0.6;
 }
 
@@ -63,32 +63,35 @@ opacity: 0.6;
 .hero {
 min-height: 100vh;
 display: flex;
-align-items: center;
 justify-content: center;
+align-items: center;
 text-align: center;
 padding: 100px 20px 40px;
+
 background:
-linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.8)),
+linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.8)
+),
 url("IMG_0388%20(1).jpeg") center/cover no-repeat;
 }
 
-.hero-content h1 {
+.hero h1 {
 font-size: clamp(55px, 12vw, 130px);
 letter-spacing: 8px;
-text-transform: uppercase;
 }
 
-.hero-content p {
-margin-top: 15px;
-font-size: 18px;
+.hero p {
+margin-top: 18px;
+font-size: 17px;
 letter-spacing: 4px;
-color: #cccccc;
+color: #ddd;
 }
 
 .button {
 display: inline-block;
 margin-top: 35px;
-padding: 14px 28px;
+padding: 14px 30px;
 border: 1px solid white;
 color: white;
 text-decoration: none;
@@ -100,20 +103,20 @@ background: white;
 color: black;
 }
 
-/* GENERAL SECTION */
+/* SECTIONS */
 section {
 padding: 100px 7%;
 }
 
-.section-title {
+.title {
 font-size: 42px;
 margin-bottom: 45px;
 }
 
-/* PHOTOGRAPHY */
+/* PHOTO GALLERY */
 .gallery {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 gap: 18px;
 }
 
@@ -122,7 +125,7 @@ width: 100%;
 height: 380px;
 object-fit: cover;
 display: block;
-transition: transform 0.4s;
+transition: 0.4s;
 }
 
 .gallery img:hover {
@@ -130,15 +133,16 @@ transform: scale(1.03);
 }
 
 /* VIDEOGRAPHY */
+.video-section {
+text-align: center;
+}
+
 .video-box {
-width: 100%;
-min-height: 350px;
+min-height: 300px;
 border: 1px solid #333;
 display: flex;
 justify-content: center;
 align-items: center;
-text-align: center;
-padding: 30px;
 }
 
 .video-box p {
@@ -146,12 +150,12 @@ color: #aaa;
 }
 
 /* ABOUT */
-.about {
+.about-text {
 max-width: 750px;
 }
 
-.about p {
-color: #bdbdbd;
+.about-text p {
+color: #bbb;
 line-height: 1.9;
 font-size: 17px;
 }
@@ -163,7 +167,7 @@ text-align: center;
 
 .contact p {
 color: #aaa;
-margin: 12px 0;
+margin: 12px;
 }
 
 .instagram {
@@ -172,7 +176,7 @@ margin-top: 25px;
 color: white;
 text-decoration: none;
 border-bottom: 1px solid white;
-padding-bottom: 5px;
+padding-bottom: 6px;
 }
 
 /* FOOTER */
@@ -196,19 +200,28 @@ gap: 12px;
 }
 
 nav ul li a {
-font-size: 12px;
+font-size: 11px;
 }
 
-.hero-content h1 {
+.hero h1 {
 letter-spacing: 4px;
+}
+
+.hero p {
+font-size: 12px;
+letter-spacing: 2px;
 }
 
 section {
 padding: 75px 5%;
 }
 
-.section-title {
+.title {
 font-size: 32px;
+}
+
+.gallery img {
+height: 330px;
 }
 }
 </style>
@@ -217,26 +230,45 @@ font-size: 32px;
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
-<div class="logo">SHEMILPIX</div>
+
+<div class="logo">
+SHEMILPIX
+</div>
 
 <ul>
-<li><a href="#photography">Photography</a></li>
-<li><a href="#videography">Videography</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#photography">Photography</a>
+</li>
+
+<li>
+<a href="#videography">Videography</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
 </ul>
+
 </nav>
 
 
 <!-- HERO -->
+
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>SHEMILPIX</h1>
 
-<p>PHOTOGRAPHY • VIDEOGRAPHY • VISUAL MEDIA</p>
+<p>
+PHOTOGRAPHY • VIDEOGRAPHY • VISUAL MEDIA
+</p>
 
 <a href="#photography" class="button">
 Explore My Work
@@ -248,23 +280,44 @@ Explore My Work
 
 
 <!-- PHOTOGRAPHY -->
+
 <section id="photography">
 
-<h2 class="section-title">
+<h2 class="title">
 Photography
 </h2>
 
 <div class="gallery">
 
-<img src="IMG_0388%20(1).jpeg" alt="ShemilPix Photography">
+<img
+src="IMG_0387%20(9).jpeg"
+alt="ShemilPix Photography"
+>
 
-<img src="image/IMG_0387%20(9).jpeg" alt="ShemilPix Photography">
+<img
+src="IMG_0388%20(1).jpeg"
+alt="ShemilPix Photography"
+>
 
-<img src="image/IMG_0389.jpeg" alt="ShemilPix Photography">
+<img
+src="IMG_0389.jpeg"
+alt="ShemilPix Photography"
+>
 
-<img src="image/IMG_0391.jpeg" alt="ShemilPix Photography">
+<img
+src="IMG_0390.jpeg"
+alt="ShemilPix Photography"
+>
 
-<img src="image/IMG_0392%20(1).jpeg" alt="ShemilPix Photography">
+<img
+src="IMG_0391.jpeg"
+alt="ShemilPix Photography"
+>
+
+<img
+src="IMG_0392%20(1).jpeg"
+alt="ShemilPix Photography"
+>
 
 </div>
 
@@ -272,20 +325,27 @@ Photography
 
 
 <!-- VIDEOGRAPHY -->
-<section id="videography">
 
-<h2 class="section-title">
+<section id="videography" class="video-section">
+
+<h2 class="title">
 Videography
 </h2>
 
 <div class="video-box">
 
 <div>
-<h3>Visual Stories</h3>
+
+<h3>
+Visual Stories
+</h3>
+
+<br>
 
 <p>
 Cinematic videos, events and creative visual storytelling.
 </p>
+
 </div>
 
 </div>
@@ -294,18 +354,25 @@ Cinematic videos, events and creative visual storytelling.
 
 
 <!-- ABOUT -->
+
 <section id="about">
 
-<h2 class="section-title">
-About ShemilPix
+<h2 class="title">
+About
 </h2>
 
-<div class="about">
+<div class="about-text">
 
 <p>
 ShemilPix is a photography and visual media space
 dedicated to capturing beautiful moments, stories
 and emotions through photographs and videos.
+</p>
+
+<br>
+
+<p>
+Every frame tells a story.
 </p>
 
 </div>
@@ -314,9 +381,10 @@ and emotions through photographs and videos.
 
 
 <!-- CONTACT -->
+
 <section id="contact" class="contact">
 
-<h2 class="section-title">
+<h2 class="title">
 Contact
 </h2>
 
@@ -329,9 +397,9 @@ Get in touch with ShemilPix.
 </p>
 
 <a
-class="instagram"
 href="https://www.instagram.com/"
 target="_blank"
+class="instagram"
 >
 Instagram →
 </a>
@@ -340,6 +408,7 @@ Instagram →
 
 
 <!-- FOOTER -->
+
 <footer>
 
 © 2026 ShemilPix — Photography & Visual Media
