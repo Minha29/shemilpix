@@ -709,3 +709,89 @@ height: 400px;
 }
 
 }
+/*=================================
+FULLSCREEN PHOTO VIEWER
+================================= */
+
+.photo-viewer {
+position: fixed;
+
+inset: 0;
+
+background: rgba(0, 0, 0, 0.94);
+
+display: none;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 40px;
+
+z-index: 9999;
+}
+
+
+.photo-viewer.active {
+display: flex;
+}
+
+
+.photo-viewer img {
+max-width: 90%;
+
+max-height: 90vh;
+
+object-fit: contain;
+}
+
+
+.close-viewer {
+position: absolute;
+
+top: 25px;
+
+right: 35px;
+
+border: none;
+
+background: transparent;
+
+color: white;
+
+font-size: 45px;
+
+cursor: pointer;
+
+font-weight: 200;
+}
+
+
+.close-viewer:hover {
+opacity: 0.6;
+}
+
+
+@media (max-width: 600px) {
+
+.photo-viewer {
+padding: 20px;
+}
+
+
+.photo-viewer img {
+max-width: 95%;
+
+max-height: 85vh;
+}
+
+
+.close-viewer {
+top: 15px;
+
+right: 20px;
+
+font-size: 38px;
+}
+
+}
