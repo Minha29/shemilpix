@@ -1,27 +1,17 @@
-// ========================================
-// SHEMILPIX
-// Photography & Visual Media
-// ========================================
+// Smooth scrolling for navigation links
 
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-// Make navigation links scroll smoothly
+link.addEventListener("click", function(event) {
 
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-
-link.addEventListener("click", function (event) {
-
-const target = document.querySelector(
-this.getAttribute("href")
-);
+const target = document.querySelector(this.getAttribute("href"));
 
 if (target) {
-
 event.preventDefault();
 
 target.scrollIntoView({
 behavior: "smooth"
 });
-
 }
 
 });
@@ -29,10 +19,30 @@ behavior: "smooth"
 });
 
 
-// Welcome message
+// Fade-in animation when sections appear
 
-document.addEventListener("DOMContentLoaded", function () {
+const sections = document.querySelectorAll(
+".gallery-section, .video-section, .about-section, .contact-section"
+);
 
-console.log("Welcome to ShemilPix 📸");
+const observer = new IntersectionObserver(
+(entries) => {
 
+entries.forEach(entry => {
+
+if (entry.isIntersecting) {
+entry.target.classList.add("show");
+}
+
+});
+
+},
+{
+threshold: 0.15
+}
+);
+
+
+sections.forEach(section => {
+observer.observe(section);
 });
