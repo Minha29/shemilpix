@@ -4,16 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shemilpix | Photography & Visual Media</title>
+<title>Shemilpix | Photography & Visual Stories</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Navigation -->
-<header>
-<div class="logo">shemilpix</div>
+<!-- NAVIGATION -->
+<header class="navbar">
+
+<a href="#home" class="logo">shemilpix</a>
 
 <nav>
 <a href="#home">Home</a>
@@ -23,191 +29,192 @@
 <a href="#contact">Contact</a>
 </nav>
 
-<a class="instagram" href="https:www.instagram.com/shemil.pix?igsh=MTF5NjhwZ3dqemF1aA==>
-                     Follow on Instagram
-</a>
-</header>
-<!-- HERO SECTION -->
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
+</header>
+
+
+<!-- HERO -->
 <section id="home" class="hero">
 
-<div class="hero-overlay"></div>
+<div class="hero-text">
 
-<div class="hero-content">
-
-<p class="hero-small-text">
-PHOTOGRAPHY • VIDEOGRAPHY • VISUAL STORIES
-</p>
+<p class="small-title">PHOTOGRAPHY • VISUAL STORIES</p>
 
 <h1>
-SHEMILPIX
+Moments<br>
+<span>worth remembering.</span>
 </h1>
 
 <p class="hero-description">
-Moments captured.<br>
-Stories preserved.
+Capturing places, people and little moments
+through my lens.
 </p>
 
 <a href="#photography" class="hero-button">
-EXPLORE MY WORK ↓
+Explore my work →
 </a>
 
 </div>
 
-<div class="scroll-text">
-SCROLL TO EXPLORE ↓
+<div class="hero-image">
+<img src="image/IMG_0387 (9).jpeg" alt="Shemilpix photography">
 </div>
 
 </section>
 
 
-<!-- PHOTOGRAPHY SECTION -->
-
-<section id="photography" class="photography-section">
-
-<div class="gallery-heading">
-
-<p>SELECTED WORK</p>
-
-<h2>Photography</h2>
-
-<p class="gallery-intro">
-A collection of moments, people and places
-captured through my lens.
-</p>
-
-</div>
-
-
-<div class="photo-grid">
-
-<div class="photo-item photo-large">
-<img
-src="IMG_0387%20(9).jpeg"
-alt="ShemilPix Photography"
->
-</div>
-
-
-<div class="photo-item photo-small">
-<img
-src="IMG_0388%20(1).jpeg"
-alt="ShemilPix Photography"
->
-</div>
-
-
-<div class="photo-item photo-small">
-<img
-src="IMG_0389.jpeg"
-alt="ShemilPix Photography"
->
-</div>
-
-
-<div class="photo-item photo-wide">
-<img
-src="IMG_0390.jpeg"
-alt="ShemilPix Photography"
->
-</div>
-
-
-<div class="photo-item photo-small">
-<img
-src="IMG_0391.jpeg"
-alt="ShemilPix Photography"
->
-</div>
-
-
-<div class="photo-item photo-large">
-<img
-src="IMG_0392%20(1).jpeg"
-alt="ShemilPix Photography"
->
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- Videography -->
-<section id="videography" class="video-section">
+<!-- PHOTOGRAPHY -->
+<section id="photography" class="section">
 
 <div class="section-heading">
-<p>VISUAL STORIES</p>
-<h2>Videography</h2>
-</div>
-
-<div class="video-content">
-<p>
-Cinematic visuals, memories and stories
-captured through motion.
-</p>
-</div>
-
-</section>
-
-
-<!-- About -->
-<section id="about" class="about-section">
 
 <div>
-<p class="section-label">ABOUT SHEMILPIX</p>
-<h2>Creating memories<br>through visuals.</h2>
+<p class="small-title">SELECTED WORK</p>
+<h2>Photography</h2>
 </div>
 
-<p class="about-text">
-Shemilpix is a photography and visual media space
-dedicated to capturing beautiful moments, people,
-places and stories through creative visuals.
+<p>
+A collection of moments,
+places and stories captured through my lens.
+</p>
+
+</div>
+
+
+<!-- PHOTO GRID -->
+<div class="photo-grid">
+
+<div class="photo photo-large">
+<img src="image/IMG_0387 (9).jpeg" alt="Photography">
+</div>
+
+<div class="photo">
+<img src="image/IMG_0388 (1).jpeg" alt="Photography">
+</div>
+
+<div class="photo tall">
+<img src="image/IMG_0389.jpeg" alt="Photography">
+</div>
+
+<div class="photo">
+<img src="image/IMG_0390.jpeg" alt="Photography">
+</div>
+
+<div class="photo wide">
+<img src="image/IMG_0391.jpeg" alt="Photography">
+</div>
+
+<div class="photo">
+<img src="image/IMG_0392 (1).jpeg" alt="Photography">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUOTE -->
+<section class="quote-section">
+
+<p>
+"Every picture tells a story.
+I just happen to capture it."
 </p>
 
 </section>
 
 
-<!-- Contact -->
+<!-- VIDEOGRAPHY -->
+<section id="videography" class="simple-section">
+
+<p class="small-title">MOVING STORIES</p>
+
+<h2>Videography</h2>
+
+<p>
+Visual stories captured through motion,
+sound and atmosphere.
+</p>
+
+<div class="coming-soon">
+VIDEOGRAPHY
+<span>COMING SOON</span>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+
+<div class="about-image">
+
+<img src="image/IMG_0390.jpeg" alt="About Shemilpix">
+
+</div>
+
+<div class="about-text">
+
+<p class="small-title">ABOUT SHEMILPIX</p>
+
+<h2>
+Seeing beauty<br>
+in ordinary moments.
+</h2>
+
+<p>
+Shemilpix is a personal collection of
+photography and visual stories.
+</p>
+
+<p>
+From quiet places to unforgettable moments,
+every frame is a small piece of a bigger story.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
 <section id="contact" class="contact-section">
 
-<p class="section-label">LET'S CONNECT</p>
+<p class="small-title">LET'S CONNECT</p>
 
 <h2>
 Have a story<br>
 to capture?
 </h2>
 
-<a href="mailto:shemilshoukkath29@gmail.com" class="button">
+<p>
+I'd love to hear from you.
+</p>
+
+<a href="mailto:yourmail@gmail.com" class="contact-button">
 Get in touch
 </a>
 
-<a href="https://instagram.com/shemil.pix" target="_blank" class="instagram-link">
-Follow on Instagram
+<a href="https://instagram.com/" target="_blank" class="instagram">
+Follow on Instagram ↗
 </a>
 
 </section>
 
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
-<p>© 2026 shemilpix</p>
-<p>Photography & Visual Media</p>
+
+<p>© 2026 Shemilpix</p>
+
+<p>Photography & Visual Stories</p>
+
 </footer>
-<!-- FULLSCREEN PHOTO VIEWER -->
 
-<div id="photoViewer" class="photo-viewer">
-
-<button id="closeViewer" class="close-viewer">
-×
-</button>
-
-<img id="viewerImage" src="" alt="ShemilPix Photography">
-
-</div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
+
